@@ -136,6 +136,7 @@ public class MidiSequencePlayer implements SequencePlayer {
     /**
      * Schedule a callback when the synthesizer reaches a time.
      */
+    @Override
     public void addEvent(Consumer<Double> callback, double atBeat) {
         int callbackNumber = saveCallback(callback);
         try {
